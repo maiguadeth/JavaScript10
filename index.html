@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AIRE CGN</title>
+    <meta
+      name="description"
+      content="Esta es una empresa dedicada a la instalacion y reparacion de Aires Acondicionados con tecnología inverter, entre otras."
+    />
+    <meta
+      name="keywords"
+      content="Aires, Instalación, Reparación, Frio Calor, Inverter"
+    />
+    <meta name="author" content="Técnico matriculado Christian Maigua" />
+    <!-- OPEN GRAPH-->
+    <meta property="og:locale" content="Es_es" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AIRE CGN" />
+    <meta
+      property="og:description"
+      content="Página de los instaladores y reparadores de AIRE CGN"
+    />
+    <meta property="og:url" content="https://altosdelperusrl.com.ar " />
+    <!-- <meta property="og:image" content="img">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    -->
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="favicon/x-icon" href="img/logo.jpg" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <main id="contenedorPrincipal" class="row">
+        <ul id="menu_index_index" class="col-6 row menu ml-8">
+          <!--  col-8 row-->
+          <li class="col">
+            <a href="index.html" class="linkInicio aIndex"> INICIO</a>
+          </li>
+          <li class="col">
+            <a href="emprendimientos.html" class="linkEmprendimientos aIndex">
+              EMPRENDIMIENTOS</a
+            >
+          </li>
+          <li class="col">
+            <a href="nosotros.html" class="linkInicio aIndex"> NOSOTROS </a>
+          </li>
+          <li class="col" class="linkContacto">
+            <a href="contacto.html" class="linkContacto aIndex"> CONTACTO</a>
+          </li>
+        </ul>
+        <img class="img_logo_index" src="img/logo.jpg" alt="logo de AIRE CGN" />
+
+        <div id="combos">
+          <h5 id="tituloFiltro">
+            Ingrese una opción para filtrar el tipo de servicio...
+          </h5>
+
+          <select id="comboOperacion">
+            <!--  onclick="menuImprimir(event)" onclick="menuImprimir(evento)" -->
+            <option value="" disabled selected>
+              Filtrar por tipo de operación
+            </option>
+            <option value="Instalación">Instalación</option>
+            <option value="Reparación">Reparación</option>
+          </select>
+
+          <select id="comboPropiedad">
+            <option value="" disabled selected>Filtrar por tipo de aire</option>
+            <option value="Split">Split</option>
+            <option value="Ventana">Ventana</option>
+            <option value="Piso techo">Piso techo</option>
+            <option value="Cassette">Cassette</option>
+          </select>
+          <select id="comboDormitorios">
+            <option value="" disabled selected>
+              Filtrar por cantidad de frigorías
+            </option>
+            <option value="1">1800 frigorías</option>
+            <option value="2">3000 frigorías</option>
+            <option value="3">4500 frigorías</option>
+            <option value="4">6000 frigorías</option>
+          </select>
+
+          <!--  <input id="inputBuscar" type="text" placeholder="Ingrese una palabra clave para buscar">
+                <button id="botonBuscar"> Buscar </button>-->
+        </div>
+      </main>
+      <!-- Desde aqui agregue-->
+      <div id="contenedorFiltros" class="row">
+        <div class="col-2" id="filtros">
+          <div id="filtrosActivos">
+            <!-- Aqui tengo que poner los filtros que voy eligiendo-->
+            <h6 id="pfiltros">Filtros Activos:</h6>
+          </div>
+          <hr />
+          <p>Precio del servicio AR$</p>
+          <!--    <form>
+                    <input id="cpeso" name="moneda" type="radio" value="peso" />AR$
+                    <input id="cdolar" name="moneda" type="radio" value="dolar" />US$
+                </form>-->
+          <p id="pdesde">Desde:</p>
+          <input id="iDesde" type="number" />
+          <p id="phasta">Hasta:</p>
+          <input id="iHasta" type="number" />
+          <button id="baplicar">Aplicar</button>
+          <hr />
+
+          <p>Tipo de aire</p>
+          <input type="checkbox" id="cboxTerreno" value="cboxTerreno" /><label
+            for="cboxTerreno"
+            >Split</label
+          >
+          <br />
+          <input type="checkbox" id="cboxTerrenoPozo" value="cboxTerrenoPozo" />
+          <label for="cboxTerrenoPozo">Ventana</label><br />
+          <input type="checkbox" id="cboxCasa" value="cboxCasa" /><label
+            for="cboxCasa"
+            >Piso techo</label
+          >
+          <br />
+
+          <input type="checkbox" id="cboxDepto" value="cboxDepto" /><label
+            for="cboxDepto"
+            >Cassette</label
+          >
+          <br />
+          <hr />
+
+          <p>Cantidad de frigorías</p>
+          <input type="checkbox" id="cbox1" value="un_cbox" /><label for="cbox1"
+            >1800 frigorías</label
+          >
+          <br />
+          <input type="checkbox" id="cbox2" value="dos_cbox" />
+          <label for="cbox2">3000 frigorías</label><br />
+          <input type="checkbox" id="cbox3" value="tres_cbox" /><label
+            for="cbox3"
+            >4500 frigorías</label
+          >
+          <br />
+          <input type="checkbox" id="cbox4" value="mas_cbox" /><label
+            for="cbox4"
+            >6000 frigorías</label
+          >
+          <br />
+        </div>
+
+        <div class="col-9" id="displayIndex"></div>
+        <!-- Hasta aqui agregue-->
+      </div>
+
+      <footer id="footer_index" class="row">
+        <div class="col-6">
+          <h3>Acerca de Nosotros:</h3>
+          <h5>Instalaciones y reparaciones AIRE CGN</h5>
+          <h5>Fundada en 2021 - CUIT: 30-38558XX-8</h5>
+          <h5>Direccion: Frozen 666 - San Justo - Buenos Aires- Argentina</h5>
+          <h5>Teléfono: 0303-4566</h5>
+          <h5>Email: airecgn@gmail.com</h5>
+          <hr />
+        </div>
+
+        <div class="col-6">
+          <h3>Seguinos en FaceBook :</h3>
+          <h5>https://www.facebook.com/aire.cgn/</h5>
+
+          <a href="https://www.facebook.com/aire.cgn/" target="blank"
+            ><img
+              class="iconos_redes"
+              src="img/iconoface2c.png"
+              alt="FaceBook"
+              title="FaceBook"
+            />
+          </a>
+          <!-- <a href="#"><img class="iconos_redes" src="img/iconoInstac.png" alt="Instagram" title="Instagram" /></a>-->
+        </div>
+        <p id="pAutor">
+          © Autor: Técnico Matriculado Christian Maigua --- Email:
+          christian.maigua@hotmail.com
+        </p>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
